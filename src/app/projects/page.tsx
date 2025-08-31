@@ -1,15 +1,9 @@
 
 
 "use client";
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
-interface Repo {
-  id: number;
-  name: string;
-  html_url: string;
-  description: string;
-  language: string;
-}
+
 
 
 
@@ -17,12 +11,12 @@ interface Repo {
 export default function Projects() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-300 py-16 px-4 flex flex-col items-center font-sans">
-      <a
+      <Link
         href="/"
         className="mb-8 px-5 py-2 bg-blue-800 text-white rounded-full shadow hover:bg-blue-600 transition hover:scale-105 self-start"
       >
         ← Back to Home
-      </a>
+      </Link>
       <h1 className="text-4xl font-extrabold text-blue-900 mb-10 drop-shadow text-center animate-fade-in">Featured Projects</h1>
       <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
         {/* Smart Inventory Management System */}
