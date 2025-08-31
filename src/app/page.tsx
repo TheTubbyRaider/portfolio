@@ -1,103 +1,97 @@
-import Image from "next/image";
 
+
+"use client";
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-300 flex flex-col items-center justify-center font-sans">
+      {/* Hero Section */}
+      <section className="w-full py-20 flex flex-col items-center justify-center text-center relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-white/0 to-blue-600/20 pointer-events-none" />
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-blue-900 drop-shadow mb-4 tracking-tight animate-fade-in">Gage Robert Strong</h1>
+        <p className="text-xl sm:text-2xl text-blue-700 mb-2 animate-fade-in">Software Developer & Data Integrity Specialist</p>
+        <p className="text-base text-gray-600 mb-6 animate-fade-in">Eagle Mountain, Utah | grsraider66@gmail.com | (801)946-0514</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4 animate-fade-in">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/TheTubbyRaider"
             target="_blank"
             rel="noopener noreferrer"
+            className="px-6 py-2 bg-blue-800 text-white rounded-full shadow hover:bg-blue-600 transition hover:scale-105"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Visit my GitHub
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/gage-strong-2b9445206/"
             target="_blank"
             rel="noopener noreferrer"
+            className="px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition hover:scale-105"
           >
-            Read our docs
+            LinkedIn
+          </a>
+          <a
+            href="/projects"
+            className="px-6 py-2 bg-gray-200 text-blue-900 rounded-full shadow hover:bg-blue-100 transition hover:scale-105"
+          >
+            View Projects
           </a>
         </div>
+      </section>
+
+      {/* Main Content */}
+      <main className="w-full max-w-4xl bg-white/90 rounded-2xl shadow-xl p-10 mt-[-60px] z-10 animate-fade-in">
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-blue-800 mb-4">Education</h2>
+          <p className="text-gray-700">Brigham Young University, Rexburg, ID</p>
+          <p className="text-gray-600">Bachelor of Science in Software Development</p>
+          <p className="text-gray-600">Certificates: Web and Computer Programming, Web Development, Software Development</p>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-blue-800 mb-4">Skills</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Programming: HTML, CSS, C++, JavaScript, Python, Node.js, React, Git, C#</li>
+              <li>Layout design, wireframes, debugging</li>
+              <li>Graphic Design: Adobe Creative Suite, Procreate, logo/brand/web design</li>
+            </ul>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Data Analysis: Excel, Google Workspace, Salesforce, SAP, Edocs, Capture</li>
+              <li>Customer Experience: QA, training, collaboration, upselling</li>
+            </ul>
+          </div>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-blue-800 mb-4">Employment History</h2>
+          <ul className="space-y-2 text-gray-700">
+            <li><span className="font-semibold">Data Integrity Specialist</span> - AmeriGas (Remote) <span className="text-gray-500">2022-now</span></li>
+            <li><span className="font-semibold">Data Governance Specialist</span> - Kforce/Ivanti (Remote) <span className="text-gray-500">2021-2022</span></li>
+            <li><span className="font-semibold">Data Entry Specialist</span> - AMP Smart, American Fork, UT <span className="text-gray-500">2020-2021</span></li>
+            <li><span className="font-semibold">Customer Service Associate</span> - Water Gardens Cinema 6, Pleasant Grove, UT <span className="text-gray-500">2018-2020</span></li>
+          </ul>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-blue-800 mb-4">References</h2>
+          <div className="bg-blue-50 rounded-lg p-4 shadow">
+            <p className="text-gray-700 italic">“Gage is a detail-oriented and reliable team member who consistently delivers high-quality work.”</p>
+            <p className="text-gray-600 mt-2">Sandra Ommerli – Data Governance Supervisor, Ivanti</p>
+            <p className="text-gray-600">(202) 660 – 2322 | sandraommerli@ivanti.com</p>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="mt-12 mb-4 text-gray-500 text-sm text-center animate-fade-in">
+        &copy; {new Date().getFullYear()} Gage Robert Strong. All rights reserved.
       </footer>
+
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 1s ease;
+        }
+      `}</style>
     </div>
   );
 }
